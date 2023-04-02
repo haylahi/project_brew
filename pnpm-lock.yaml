@@ -4,7 +4,7 @@ specifiers:
   '@glidejs/glide': ^3.6.0
   '@nuxt/image-edge': 1.0.0-28004510.a0dc8e8
   '@nuxtjs/color-mode': ^3.2.0
-  '@nuxtjs/supabase': 0.3.4-beta.0
+  '@nuxtjs/supabase': ^0.3.1
   '@nuxtjs/tailwindcss': ^6.6.5
   nuxt: ^3.3.2
   nuxt-icon: ^0.3.3
@@ -18,7 +18,7 @@ dependencies:
 devDependencies:
   '@nuxt/image-edge': 1.0.0-28004510.a0dc8e8
   '@nuxtjs/color-mode': 3.2.0
-  '@nuxtjs/supabase': 0.3.4-beta.0
+  '@nuxtjs/supabase': 0.3.3
   '@nuxtjs/tailwindcss': 6.6.5_webpack@5.77.0
   nuxt: 3.3.3
   nuxt-icon: 0.3.3_vue@3.2.47
@@ -857,9 +857,9 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/supabase/0.3.4-beta.0:
-    resolution: {integrity: sha512-36A5YZC4x1zraxBqxAZrCCv77jM6PMY3ZbvKIUSCJnKWKY6gfqaH7RPGJ/E98Ias8/2c+2AEJoUQsznyLG+90Q==}
-    deprecated: v0.3.3 & v0.3.4-beta.0 are broken versions, production ready latest is v0.3.1
+  /@nuxtjs/supabase/0.3.3:
+    resolution: {integrity: sha512-LtPGSiFHUY4+GW/h73Z4TW7Ys665MXDY5uzbv0kLPc5qGq5is6h4jQvEZv30Cs+cf+nQ6Cz8lX5d3DM7cVDogQ==}
+    deprecated: v0.3.3 broken version, production ready latest is v0.3.1
     dependencies:
       '@nuxt/kit': 3.3.3
       '@supabase/supabase-js': 2.13.1
