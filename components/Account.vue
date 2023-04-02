@@ -62,7 +62,6 @@ async function signOut() {
 </script>
 
 <template>
-  <AppHeader/>
   <form class="form-widget" @submit.prevent="updateProfile">
     <Avatar v-model:path="avatar_path" @upload="updateProfile" />
     <div>
@@ -73,10 +72,10 @@ async function signOut() {
       <label for="username">Name</label>
       <input id="username" type="text" v-model="username" />
     </div>
-    <div>
+    <!-- <div>
       <label for="website">Website</label>
       <input id="website" type="website" v-model="website" />
-    </div>
+    </div> -->
 
     <div>
       <input
