@@ -9,6 +9,22 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.3.2"
+    "@nuxt/image-edge": "1.0.0-28004510.a0dc8e8",
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/supabase": "0.3.4-beta.0",
+    "@nuxtjs/tailwindcss": "^6.6.5",
+    "nuxt": "^3.3.2",
+    "nuxt-icon": "^0.3.3",
+    "prettier": "^2.8.7"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "tailwindConfig": "./tailwind.config.js"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "nuxt-swiper": "^1.0.1"
   }
 }
