@@ -62,6 +62,7 @@ async function signOut() {
 </script>
 
 <template>
+  <AppHeader/>
   <form class="form-widget" @submit.prevent="updateProfile">
     <Avatar v-model:path="avatar_path" @upload="updateProfile" />
     <div>
