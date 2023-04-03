@@ -1,42 +1,34 @@
-# Nuxt 3 Minimal Starter
+# 📸 🍺 Project Brew
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> An invite-only social sharing webapp for sharing photos when drinking to share the moment with friends far and wide.
 
-## Setup
+## Contents
+- [📸 🍺 Project Brew](#--project-brew)
+- [Setup](#setup)
+- [Introduction](#introduction)
+- [Software](#software)
+- [Misc. Notes](#misc-notes)
+- [Credits](#credits)
+    - [Authors](#authors)
+  - [Licensing](#licensing)
 
-Make sure to install the dependencies:
+# Setup
 
-```bash
-# yarn
-yarn install
 
-# npm
-npm install
+# Introduction
 
-# pnpm
-pnpm install
-```
+# Software
 
-## Development Server
 
-Start the development server on `http://localhost:3000`
+# Misc. Notes
 
-```bash
-npm run dev
-```
+# Credits
+### Authors
 
-## Production
+This project was created by:
 
-Build the application for production:
+- [@colintravis](https://colintravis.com)
 
-```bash
-npm run build
-```
+## Licensing
 
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Copyright © 2023 Colin Travis
