@@ -48,7 +48,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-  css: ['@/assets/main.css'],
   image: {},
   modules: [
     '@nuxtjs/tailwindcss',

@@ -1,11 +1,9 @@
 <script setup>
-const user = useSupabaseUser()
+
 </script>
 
 <template>
-  <div class="container" style="padding: 50px 0 100px 0">
-    <App-Header />
-    <Account v-if="user" />
-    <Auth v-else/>
+  <div class="container flex items-center justify-center w-screen h-screen mx-auto" >
+    <h1 class="text-8xl">🍺 📸</h1>
   </div>
 </template>
