@@ -1,7 +1,7 @@
 const { theme } = require('./tailwind.config')
 
 const meta = {
-  title: 'Project Brew 🍺',
+  title: 'Brewster',
   description: '',
   url: '',
   image: ''
@@ -39,7 +39,7 @@ export default defineNuxtConfig({
         // { name: 'theme-color', content: theme.extend.colors['red-500'] }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
         { rel: 'canonical', href: meta.url },
         {
           rel: 'stylesheet',
@@ -48,15 +48,17 @@ export default defineNuxtConfig({
       ]
     }
   },
-  css: ['@/assets/main.css'],
-  image: {},
+  image: {
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/dhwtxeo2c/image/fetch/brewster/'
+    }
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
-    'nuxt-swiper',
     '@nuxt/image-edge',
     '@nuxtjs/supabase',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
   ],
   colorMode: {
     classSuffix: ''
