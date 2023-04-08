@@ -1,5 +1,4 @@
 <script setup>
-import moment from 'moment'
 const user = useSupabaseUser()
 
 const { data: posts } = await useFetch('/api/posts', {
