@@ -1,4 +1,5 @@
 const { theme } = require('./tailwind.config')
+import pwa_icons from './pwa_icons'
 
 const meta = {
   title: 'Project Brew 🍺',
@@ -56,8 +57,24 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@nuxt/image-edge',
     '@nuxtjs/supabase',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@vite-pwa/nuxt'
   ],
+  pwa: {
+    manifest: {
+      name: 'Brewster',
+      short_name: 'Brewster',
+      description: "Social sharing app for beer drinkin'",
+      icons: pwa_icons
+    },
+    workbox: {
+      navigationFallback: '/'
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module'
+    }
+  },
   colorMode: {
     classSuffix: ''
   }
