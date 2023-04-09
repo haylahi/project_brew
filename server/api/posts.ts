@@ -10,27 +10,19 @@ export default defineEventHandler(async (event) => {
   }
 
   const data = await prisma.posts.findMany({
-    where: {
-      user_id: user.id
-    },
     select: {
-      username: true,
       image: true,
       drink_type: true,
       created_at: true,
-      caption: true
+      caption: true,
+      profiles: {
+        select: {
+          favdrink: true,
+          username: true
+        }
+      }
     }
   })
 
-  // const data = await prisma.posts.findMany({
-  //   where: {
-  //     user_id: user.id,
-  //   },
-  //   select: {
-  //     image: true,
-  //     id: true,
-  //     drink_type: true
-  //   }
-  // })
   return data
 })

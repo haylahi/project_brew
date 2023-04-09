@@ -8,14 +8,14 @@ const { data: posts } = await useFetch('/api/posts', {
 
 <template>
   <div>
-    <div class="text-white">
-      <!-- {{ posts }} -->
+    <div class="flex flex-col gap-8 text-white">
       <div v-for="(post, postIndex) in posts" :key="postIndex" class="flex">
+        {{ post }}
         <div class="max-w-6xl p-8 mx-auto bg-transparent border-4 border-orange-700 rounded-2xl">
           {{ post.created_at }}
           <p class="text-xs">
             <span class="font-bold">
-              {{ post.username }}
+              {{ post.profiles.username }}
             </span>
             is drinking
             <span class="text-orange-700"> {{ post.drink_type }}</span>
