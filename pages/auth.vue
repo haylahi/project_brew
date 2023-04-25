@@ -74,13 +74,14 @@ const handleSignup = async () => {
           placeholder="some email"
         />
       </div>
-      <div>
+      <div class="text-white">
         <label for="password">password</label>
         <input
           v-model="form.password"
           type="password"
           name="password"
           id="password"
+          class="text-black"
         />
       </div>
       <!-- buttons -->
