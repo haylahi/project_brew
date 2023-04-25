@@ -4,6 +4,9 @@ const user = useSupabaseUser()
 const { data: posts } = await useFetch('/api/posts', {
   headers: useRequestHeaders(['cookie'])
 })
+
+console.log("here's the data: ", posts)
+console.log("Here's the user: ", user)
 </script>
 
 <template>
@@ -25,7 +28,6 @@ const { data: posts } = await useFetch('/api/posts', {
           <nuxt-img
             :src="post.image"
             provider="cloudinary"
-            width="300"
             height="500"
             class="max-w-[400px] my-8"
           />
