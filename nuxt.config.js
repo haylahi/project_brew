@@ -48,9 +48,14 @@ export default defineNuxtConfig({
       ]
     }
   },
+  runtimeConfig: {
+    public: {
+      CLOUDINARY_PRESET: process.env.CLOUDINARY_PRESET
+    }
+  },
   image: {
     cloudinary: {
-      baseURL: 'https://res.cloudinary.com/dhwtxeo2c/image/fetch/brewster/'
+      baseURL: 'https://res.cloudinary.com/project-brew/image/upload/'
     }
   },
   modules: [
@@ -58,7 +63,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxt/image-edge',
     '@nuxtjs/supabase',
-    '@nuxtjs/color-mode',
+    '@nuxtjs/color-mode'
   ],
   colorMode: {
     classSuffix: ''

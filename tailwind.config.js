@@ -4,6 +4,9 @@
 module.exports = {
   darkMode: 'class',
   content: ['pages/**/*.vue'],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
   theme: {
     extend: {
       scale: {

@@ -3,13 +3,43 @@ const client = useSupabaseClient()
 const user = useSupabaseUser()
 
 const post = reactive({
-  image: '/profiles/test/PXL_20230408_223853485.MP.jpg',
+  image: '',
   caption: '',
   created_at: '',
   drink_type: ''
 })
 
+const uploadFile = ref(null)
+
+const handleFileSelection = (e) => {
+  uploadFile.value = e.target.files[0]
+}
 const handlePost = async () => {
+  let formData = new FormData()
+
+  formData.append('upload_preset', 'unsigned_preset')
+  formData.append('folder', `users/posts/`)
+  formData.append('file', uploadFile.value)
+  await useFetch('https://api.cloudinary.com/v1_1/project-brew/image/upload', {
+    method: 'POST',
+    body: formData
+  }).then(
+    (res) => {
+      const imageData = res.data.value
+      const error = res.error.value
+      if (error) {
+        // dealing error
+        console.log(error)
+      } else {
+        post.image = imageData.public_id
+        console.log(imageData.public_id)
+      }
+    },
+    (error) => {
+      console.log('exception...')
+      console.log(error)
+    }
+  )
   try {
     const { data, error } = await client.from('posts').insert({
       caption: post.caption,
@@ -52,11 +82,18 @@ const handlePost = async () => {
               <option>IPA</option>
             </select>
           </label>
+          <label for="file">Select Header Image</label>
+
+          <input
+            type="file"
+            name="file"
+            accept="image/*"
+            @change="handleFileSelection($event)"
+          />
           <button>Submit</button>
         </div>
       </div>
     </form>
   </div>
 
-  <Upload />
 </template>
