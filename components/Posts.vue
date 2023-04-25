@@ -5,8 +5,8 @@ const { data: posts } = await useFetch('/api/posts', {
   headers: useRequestHeaders(['cookie'])
 })
 
-console.log("here's the data: ", posts)
-console.log("Here's the user: ", user)
+console.log("here's the data: ", posts.value)
+console.log("Here's the user: ", user.value)
 </script>
 
 <template>

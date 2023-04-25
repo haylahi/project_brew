@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 401, message: 'Unauthorized' })
   }
 
-
+  console.log("api user: ", user)
   const data = await prisma.posts.findMany({
     select: {
       image: true,
@@ -25,5 +25,6 @@ export default defineEventHandler(async (event) => {
     },
     orderBy: { created_at: 'desc' }
   })
+  console.log("api data: ", data)
   return data
 })
